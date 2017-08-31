@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import firebase from 'firebase';
-import { Button, Card, CardSection, Input, Spinner } from './common';
+import { Button, ard, CardSection, Input, Spinner } from './common';
 
 class LoginForm extends Component {
   state = { email: '', password: '', error: '', loading: false };
@@ -24,7 +24,7 @@ class LoginForm extends Component {
   }
 
   onLoginSuccess() {
-    this.setState({ 
+    this.setState({
       email: '',
       password: '',
       loading: false,

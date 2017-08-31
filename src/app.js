@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, Spinner } from './components/common';
-import { LoginForm } from './components/LoginForm';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
   state = { loggedIn: null };
@@ -22,7 +22,7 @@ class App extends Component {
       if (user) {
         this.setState({ loggedIn: true });
       } else {
-        this.setState({ loggedIn: false })
+        this.setState({ loggedIn: false });
       };
     });
   };
@@ -32,12 +32,12 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-        <Button onPress={() => firebase.auth().signOut()}>
-          Log Out
-        </Button> 
+          <Button onPress={() => firebase.auth().signOut()}>
+            Log Out
+          </Button> 
         )     
       case false:
-        return <LoginForm />
+        return <LoginForm />;
       default:
         return <Spinner size="large" />
     }
@@ -47,10 +47,11 @@ class App extends Component {
     return (
       <View>
         <Header headerText="Authentication" />
-        <LoginForm />
+        {this.renderContent()}
       </View>
     );
   };
 }
 
 export default App;
+
