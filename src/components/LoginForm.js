@@ -6,8 +6,6 @@ import { Button, Card, CardSection, Input, Spinner } from './common';
 class LoginForm extends Component {
   state = { email: '', password: '', error: '', loading: false };
 
-  
-
   onButtonPress() {
     const { email, password } = this.state;
 
@@ -22,11 +20,8 @@ class LoginForm extends Component {
       });
   }
   onLoginFail() {
-    this.setState({
-      error: 'Authentication Failed.',
-      loading: false
-    });
-  };
+    this.setState({ error: 'Authentication Failed.', loading: false });
+  }
 
   onLoginSuccess() {
     this.setState({ 
@@ -38,8 +33,8 @@ class LoginForm extends Component {
   };
 
   renderButton() {
-    if (this.state.loading){
-       return <Spinner size="small" />
+    if (this.state.loading) {
+      return <Spinner size="small" />
     }
     return (
       <Button onPress={this.onButtonPress.bind(this)}>
@@ -70,7 +65,7 @@ class LoginForm extends Component {
           />
          </CardSection>
 
-         <Text style ={styles.errorTextStyle}>
+         <Text style={styles.errorTextStyle}>
            {this.state.error}
          </Text>
         
