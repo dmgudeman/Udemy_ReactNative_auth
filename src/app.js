@@ -23,9 +23,9 @@ class App extends Component {
         this.setState({ loggedIn: true });
       } else {
         this.setState({ loggedIn: false });
-      };
+      }
     });
-  };
+  }
 
   renderContent() {
 
@@ -35,7 +35,7 @@ class App extends Component {
           <Button onPress={() => firebase.auth().signOut()}>
             Log Out
           </Button> 
-        )     
+        );    
       case false:
         return <LoginForm />;
       default:
@@ -53,5 +53,5 @@ class App extends Component {
   };
 }
 
-export default App;
+export { App };
 
