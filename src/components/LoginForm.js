@@ -20,7 +20,7 @@ class LoginForm extends Component {
       });
   }
   onLoginFail() {
-    this.setState({ error: 'Authentication Failed.', loading: false });
+    this.setState({ error: 'Authentication Failed', loading: false });
   }
 
   onLoginSuccess() {
@@ -30,7 +30,7 @@ class LoginForm extends Component {
       loading: false,
       error: ''
     });
-  };
+  }
 
   renderButton() {
     if (this.state.loading) {
@@ -39,7 +39,7 @@ class LoginForm extends Component {
     return (
       <Button onPress={this.onButtonPress.bind(this)}>
         Log in
-      </Button> 
+      </Button>
     );
   };
 
@@ -51,7 +51,7 @@ class LoginForm extends Component {
             placeholder="user@gmail.com"
             label="Email"
             value={this.state.email}
-            onChangeText={email => this.setState({ email })} 
+            onChangeText={email => this.setState({ email })}
           />
         </CardSection>
 
