@@ -59,7 +59,7 @@ class LoginForm extends Component {
             onChangeText={ email => this.setState({ email })} 
           />
         </CardSection>
-        
+
         <CardSection>
           <Input 
             secureTextEntry
@@ -70,8 +70,8 @@ class LoginForm extends Component {
           />
          </CardSection>
 
-         <Text style = {styles.errorTextStyle}>
-           { this.state.error }
+         <Text style ={styles.errorTextStyle}>
+           {this.state.error}
          </Text>
         
         <CardSection>
