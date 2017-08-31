@@ -61,12 +61,12 @@ class LoginForm extends Component {
             placeholder="password"
             label="Password"
             value={this.state.password}
-            onChangeText={ password => this.setState({ password })}
+            onChangeText={password => this.setState({ password })}
           />
         </CardSection>
 
         <Text style={styles.errorTextStyle}>
-           this.state.error}
+           {this.state.error}
         </Text>
         
         <CardSection>
